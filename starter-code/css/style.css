@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Martian Mono";
+  src: url("../assets/fonts/martian-mono/MartianMono-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer customproperties{
+
+:root{
+
+    /* colors */
+    --clr-drk-900: #062630;
+    --clr-drk-700: #385159;
+    --clr-light-200:#E6E1DF;
+    --clr-light-100:#FAF5F3;
+    --clr-white: #fff;
+
+    --clr-salmon-500: #FEA36F;
+    --clr-light-salmon: #FFE2D1;
+    --clr-salmon: #FFF5EF;
+
+    /* gradient */
+    --hero-text-gradient: linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%);
+    --bg-gradient: linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%);
+    /* typography */
+
+
+
+
+    /* spacing */
+    --desktop-gap: 7.5rem;
+    --table-gap:5rem;
+    --mobile-gap:4rem;
+}
+
+
+}
+
+/* Reset */
+
+*{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 7.5rem;
+    padding-block: 7.5rem;
+}
+
+.list-item_together{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.list-item_together::before{
+    content: "";
+    background: transparent;
+    background-image: url("/starter-code/assets/images/icon-check.svg");
+    background-repeat: no-repeat;
+    height: 28px;
+    width: 28px;
+    
+}
