@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  src: url("assets/fonts/inter/Inter-Italic-VariableFont_opsz\,wght.ttf")
+  src: url("assets/fonts/inter/Inter-VariableFont_opsz\,wght.ttf")
     format("truetype");
   font-weight: 100 900;
   font-style: normal;
@@ -164,6 +164,10 @@ background: var(--hero-text-gradient);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+}
+
+.bold{
+  font-weight: 700;
 }
 
 .hero-content{

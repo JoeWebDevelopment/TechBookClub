@@ -1,103 +1,121 @@
-# Frontend Mentor - Tech book club landing page
+# Frontend Mentor - Tech Book Club landing page solution
 
-![Design preview for the Tech book club landing page coding challenge](./preview.jpg)
+This is my solution to the [Tech Book Club landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tech-book-club-landing-page-fZQidjHU73). I built the page to practice translating a Figma design into semantic HTML and responsive CSS while paying close attention to accessibility and maintainable layout decisions.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for purchasing this premium Frontend Mentor coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Accessibility](#accessibility)
+  - [Continued development](#continued-development)
+  - [AI collaboration](#ai-collaboration)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. These premium challenges are perfect portfolio pieces, so please feel free to use what you create in your portfolio to show others.
+## Overview
 
-**To do this challenge, you need a good understanding of HTML and CSS.**
+### The challenge
 
-## The challenge
+Users should be able to:
 
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
+- View an appropriate layout across mobile, tablet, and desktop screen sizes
+- See hover and keyboard-focus states for interactive elements
+- Navigate the page using semantic links and a logical heading structure
+- Understand meaningful images and visual ratings through accessible text alternatives
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+### Links
 
-Your users should be able to:
+- [Live site](https://darling-valkyrie-a5b896.netlify.app/)
+- [Source code](https://github.com/JoeWebDevelopment/TechBookClub)
 
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+## My process
 
-### Want some support on the challenge?
+I began by structuring the complete page in HTML before focusing on visual styling. This helped me think through the document outline, section boundaries, lists, pricing-card headings, image alternatives, and the difference between links and buttons.
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+I then built the desktop layout section by section and adapted it for tablet and mobile widths. I used reusable layout classes for shared two-column sections and component classes for patterns such as calls to action, ratings, feature lists, membership cards, and social links.
 
-## Where to find everything
+During development, I relied heavily on Firefox DevTools. Flexbox overlays, computed styles, the accessibility tree, and temporary outlines helped me understand which element owned a spacing or alignment problem instead of guessing at fixes.
 
-Your task is to build out the project to the design file provided. You can download the Figma design file on the platform. You can download the design file on the platform. **Please be sure not to share them with anyone else.** The design download comes with a `README.md` file as well to help you get set up.
+### Built with
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized. Some are reusable at multiple screen sizes. So if you don't see an image in a specific folder, it will typically be in another folder for that page.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox and wrapping flex layouts
+- Responsive media queries
+- Locally hosted variable fonts
+- CSS counters
+- CSS pseudo-elements
+- Responsive and decorative image assets
+- Accessible focus states and screen-reader-only content
+- Firefox DevTools and Accessibility Inspector
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+The project does not require JavaScript. 
 
-The design system in the design file will give you more information about the various colors, fonts, and styles used in this project. Our fonts always come from [Google Fonts](https://fonts.google.com/).
+### What I learned
 
-## Using AI coding assistants
+#### Translating visual effects into CSS
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+One of my biggest takeaways was becoming more comfortable using `::before` and `::after` for decorative details. I used pseudo-elements to create background glow effects, custom checkmark bullets, journey arrows, and the circle around the word “club.”
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+Using pseudo-elements allowed me to keep decorative content out of the HTML. This kept the markup more semantic and prevented screen readers from announcing visual elements that do not add meaningful information.
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+The background glows taught me how to establish a positioning context with `position: relative`, place a decorative layer with `position: absolute`, and clip oversized effects with `overflow: hidden`. I also learned to consider stacking order and pointer interaction so decorative layers do not cover or interfere with page content.
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+I independently created the circle and journey-arrow effects by breaking each design detail into smaller positioning and layering problems. This was a rewarding milestone because a few months earlier I would not have known where to begin.
 
-## Building your project
+#### Flexbox sizing and alignment
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+This project deepened my understanding of Flexbox's main and cross axes. When the membership cards changed from a row to a column, I learned that `flex-basis` began controlling height instead of width. Setting the mobile container to stretch its children and resetting the cards' flex behavior produced the intended full-width stack.
 
-1. Separate the `starter-code` from the rest of this project and rename it to something meaningful for you. Initialize the codebase as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/). **⚠️ IMPORTANT ⚠️: There are already a couple of `.gitignore` files in this project. Please do not remove them or change the content of the files. If you create a brand new project, please use the `.gitignore` files provided in your new codebase. This is to avoid the accidental upload of the design files to GitHub. With these premium challenges, please be sure not to share the design files in your GitHub repo. Thanks!**
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+I also encountered inconsistent spacing in the feature list. The apparent padding was caused by `justify-content: space-between` distributing a different amount of free space on every list item. In another case, the generated checkmark was shrinking beside longer text. Debugging these issues taught me to inspect the size and alignment of each flex item rather than assuming that visible space comes from margin or padding.
 
-## Deploying your project
+#### Semantic lists and CSS counters
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+The reading journey is an ordered process, so I kept it as an `<ol>` while creating custom visual numbers with CSS counters. This let me preserve the meaning of the sequence while styling the numbers and connecting arrows to match the design.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+#### Responsive spacing
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
+I learned to distinguish between spacing owned by a section and spacing owned by a parent layout. Section padding controls breathing room inside a section's background, while `gap` controls the relationship between sibling elements. Thinking about which element owns the space made the layout more predictable across breakpoints.
 
-## Create a custom `README.md`
+### Accessibility
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+Accessibility was considered throughout the project rather than left until the end. I focused on:
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- Maintaining one `<h1>` and a logical `<h2>`/`<h3>` hierarchy
+- Using ordered and unordered lists where the content has list meaning
+- Giving meaningful photographs concise alternative text
+- Hiding decorative arrows, icons, patterns, and avatars from assistive technology
+- Exposing each five-star rating once with screen-reader-only text
+- Giving icon-only social links accessible names
+- Providing visible keyboard-focus states for interactive elements
+- Using the Firefox accessibility tree to confirm roles and accessible names
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+One important lesson was that an image does not need alternative text merely because it can be described. The decision depends on whether the image contributes information that is missing from the surrounding content.
 
-## Submitting your solution
+### Continued development
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
+In future projects, I want to continue improving:
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+- Mobile-first CSS organization
+- Fluid typography and spacing with fewer fixed values
+- Responsive decorative effects that rely less on pixel-specific offsets
+- Consistent component and utility-class naming
+- Testing at widths between common device breakpoints
+- Keyboard, zoom, overflow, and cross-browser accessibility testing
+- Making smaller, focused Git commits with clear messages
 
-**⚠️ IMPORTANT ⚠️: With these premium challenges, please be sure not to upload the design files to GitHub when you're submitting to the platform and sharing it around. If you've created a brand new project, the easiest way to do that is to copy across the `.gitignore` provided in this starter project.**
+### AI collaboration
 
-## Sharing your solution
+I used ChatGPT as a technical mentor during this project. I asked for conceptual explanations, accessibility reviews, and help diagnosing specific HTML, Flexbox, and responsive-layout problems. I remained the primary developer and wrote the implementation myself rather than asking AI to generate the completed page.
 
-There are multiple places you can share your solution:
+The most useful assistance involved learning how to investigate problems with DevTools. Instead of receiving a finished solution, I was guided to inspect computed styles, Flexbox axes, generated pseudo-elements, accessible names, and breakpoint behavior. As the challenge progressed, I became increasingly able to identify and implement effects independently, including the decorative circle, journey arrows, checkmark markers, and background glows.
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+This workflow helped me use AI as a debugging and learning partner while continuing to build my own problem-solving skills.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+## Author
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-**Have fun building!** 🚀
+- Frontend Mentor - [@JoeWebDevelopment](https://www.frontendmentor.io/profile/JoeWebDevelopment)
+- GitHub - [@JoeWebDevelopment](https://github.com/JoeWebDevelopment)
