@@ -102,6 +102,23 @@ header{
   background-color: var(--clr-salmon);
   padding-block-end: 4.5rem;
   padding-inline: 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+header::after{
+  content: "";
+  height: 684px;
+  width: 684px;
+  position: absolute;
+  right: -40px;
+  border-radius: 100%;
+  bottom: -200px;
+  background-image: url("/starter-code/assets/images/pattern-glow.svg");
+  z-index: -1;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 .header-container{
   padding-inline: 1rem;
@@ -444,7 +461,6 @@ letter-spacing: -0.5px;
   bottom: -280px;
   z-index: -1;
 }
-
 
 .journey-steps-list{
   width: 100%;
@@ -967,4 +983,6 @@ gap: 0.875rem;
 .list-item-together::before{
   flex-shrink: 0;
 }
+
+.
 }
