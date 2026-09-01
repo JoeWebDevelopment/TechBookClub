@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  src: url("../assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf")
+  src: url("assets/fonts/inter/Inter-Italic-VariableFont_opsz\,wght.ttf")
     format("truetype");
   font-weight: 100 900;
   font-style: normal;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Martian Mono";
-  src: url("../assets/fonts/martian-mono/MartianMono-VariableFont_wdth\,wght.ttf")
+  src: url("assets/fonts/martian-mono/MartianMono-VariableFont_wdth\,wght.ttf")
     format("truetype");
   font-weight: 100 900;
   font-style: normal;
@@ -98,7 +98,7 @@ header{
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  background-image: url("/starter-code/assets/images/pattern-light-bg.svg");
+  background-image: url("assets/images/pattern-light-bg.svg");
   background-color: var(--clr-salmon);
   padding-block-end: 4.5rem;
   padding-inline: 1rem;
@@ -115,7 +115,7 @@ header::after{
   right: -40px;
   border-radius: 100%;
   bottom: -200px;
-  background-image: url("/starter-code/assets/images/pattern-glow.svg");
+  background-image: url("assets/images/pattern-glow.svg");
   z-index: -1;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -343,7 +343,7 @@ letter-spacing: -2px;
 .list-item-together::before{
     content: "";
     background: transparent;
-    background-image: url("/starter-code/assets/images/icon-check.svg");
+    background-image: url("assets/images/icon-check.svg");
     background-repeat: no-repeat;
     height: 24px;
     width: 24px;
@@ -392,7 +392,7 @@ position: relative;
 
 .circle::after{
   content: "";
-  background-image: url("/starter-code/assets/images/pattern-circle.png");
+  background-image: url("assets/images/pattern-circle.png");
   width:160px;
   height: 160px;
   position: absolute;
@@ -439,7 +439,7 @@ letter-spacing: -0.5px;
   justify-content: center;
   align-items: center;
   padding-block: 5rem;
-  background-image: url("/starter-code/assets/images/pattern-light-bg.svg");
+  background-image: url("assets/images/pattern-light-bg.svg");
   background-repeat: no-repeat;
   gap: 4rem;
   background-color: var(--clr-light-100);
@@ -454,7 +454,7 @@ letter-spacing: -0.5px;
   position: absolute;
   height: 684px;
   width: 684px;
-  background-image: url("/starter-code/assets/images/pattern-glow.svg");
+  background-image: url("assets/images/pattern-glow.svg");
   background-repeat: no-repeat;
   background-size: cover;
   right: -280px;
@@ -523,7 +523,7 @@ color: #062630;
   height: 32px;
   left: 146px;
   top: .40px;
-  background-image: url("/starter-code/assets/images/pattern-arrow.svg");
+  background-image: url("assets/images/pattern-arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -573,7 +573,7 @@ text-align: center;
   align-items: flex-start;
   gap: 1.5rem;
   padding: 1.5rem;
-  border: 1px solid var(--clr-light-100);
+  border: 1px solid var(--clr-light-200);
   flex: 1 0 0;
   border-radius: 8px;
 
@@ -581,7 +581,7 @@ text-align: center;
 
 .card-pro{
   padding: 2.5rem 1.5rem;
-  background-image: url("/starter-code/assets/images/pattern-glow.svg");
+  background-image: url("assets/images/pattern-glow.svg");
   background-color: var(--clr-light-100);
   background-repeat: no-repeat;
   background-size: contain;
@@ -646,7 +646,7 @@ gap: 12px;
   position: relative;
   height: 20px;
   width: 20px;
-  background-image: url("/starter-code/assets/images/icon-check.svg");
+  background-image: url("assets/images/icon-check.svg");
   gap: 1.25rem;
   background-repeat: no-repeat;
   background-size: contain;
@@ -923,7 +923,7 @@ letter-spacing: -1px;
     flex-wrap: wrap;
   }
   .membership-option-card{
-    border: 2px solid black;
+    border: 1px solid var(--clr-light-200);
     flex: 0 1 calc((100% - 1.5rem) / 2);
   }
 
@@ -983,6 +983,4 @@ gap: 0.875rem;
 .list-item-together::before{
   flex-shrink: 0;
 }
-
-.
 }
