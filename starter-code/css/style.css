@@ -328,8 +328,9 @@ letter-spacing: -2px;
     background: transparent;
     background-image: url("/starter-code/assets/images/icon-check.svg");
     background-repeat: no-repeat;
-    height: 28px;
-    width: 28px;
+    height: 24px;
+    width: 24px;
+    background-size: contain;
     
 }
 
@@ -805,9 +806,39 @@ letter-spacing: -1px;
   border-radius: 8px;
   width: 100%;
 }
+
+.membership-btn:hover, .hero-cta-btn:hover{
+  background: linear-gradient(90deg, var(--colors-light-salmon-100, #FFE2D1) 0%, var(--colors-light-salmon-50, #FFF5EF) 100%);
+  cursor: pointer;
+  outline: 2px solid black;
+  outline-offset: 2px
+;
+}
+
+.cta-btn-footer:hover{
+  background: linear-gradient(90deg, var(--colors-neutral-700, #385159) 0%, var(--colors-neutral-900, #062630) 100%);
+}
+.membership-btn:focus-visible, .hero-cta-btn:focus-visible{
+   outline: 2px solid black;
+  outline-offset: 2px
+}
+.cta-btn-footer:focus-visible{
+  outline: 2px solid var(--clr-white);
+  outline-offset: 2px;
+
+}
+
+.social-link:hover{
+  opacity: 0.7;
+}
 /* Tablet */
 
 @media(max-width:1024px){
+
+
+  main{
+    gap: 4rem;
+  }
   .hero-two-column,.two-column, .reversed{
     flex-direction: column;
     align-items: flex-start;
@@ -919,5 +950,21 @@ letter-spacing: -1px;
   flex: none;
 }
 
+.hero-heading, .club-heading, .journey-heading, .together-heading,.membership-heading,.footer-heading{
+  font-size: 2.125rem;
+}
+.testimonial-text{
+  font-size: 1.5rem;
+  line-height: 110%;
+}
 
+a{
+  font-size: 1rem;
+}
+.list-item-together{
+gap: 0.875rem;
+}
+.list-item-together::before{
+  flex-shrink: 0;
+}
 }
